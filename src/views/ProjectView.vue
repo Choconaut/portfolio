@@ -125,6 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 }
 
+.project-image:nth-child(even) {
+  justify-content: flex-end;
+}
+
 .project-image:hover {
   transform: translateY(-2rem);
   transition: all 0.3s ease-in-out;
