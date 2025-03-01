@@ -68,8 +68,7 @@ div {
 p {
   font-size: 2em;
   user-select: none;
-  animation:
-    gradient 8s infinite;
+  animation: gradient 8s ease infinite;
 
   @media (max-width: 768px) {
     font-size: 1.3em;
@@ -89,20 +88,11 @@ p:last-of-type {
 }
 
 @keyframes gradient {
-  10% {
-    color: #05445e;
-  }
-  25% {
-    color: #189ab4;
-  }
-  50% {
-    color: #75e6da;
-  }
-  75% {
-    color: #d4f1f4;
-  }
-  100% {
-    color: #6d9ba9;
-  }
+  0%   { color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.15); }
+  25%  { color: #e1f5fe; text-shadow: 1px 1px 3px rgba(0,0,0,0.15); }
+  50%  { color: #b3e5fc; text-shadow: 1px 1px 3px rgba(0,0,0,0.15); }
+  75%  { color: #81d4fa; text-shadow: 1px 1px 3px rgba(0,0,0,0.15); }
+  100% { color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.15); }
 }
+
 </style>
