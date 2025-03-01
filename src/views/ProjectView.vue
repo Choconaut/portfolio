@@ -1,5 +1,25 @@
 <script setup lang="ts">
+document.addEventListener('DOMContentLoaded', () => {
+  const projects = document.querySelectorAll('.project');
 
+  // Threshold for when a project should be considered in view
+  const observerOptions = {
+    threshold: 0.7,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  projects.forEach(project => {
+    observer.observe(project);
+  });
+});
 </script>
 
 <template>
@@ -55,10 +75,24 @@
 .project {
   display: flex;
   flex-direction: row;
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
+.project:nth-child(odd) {
+  transform: translateX(-50px);
+}
+
+/* For even projects: slide in from right */
 .project:nth-child(even) {
+  transform: translateX(50px);
   justify-content: flex-end;
+}
+
+/* When in view, reset transform and opacity */
+.project.in-view {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .project-image {
@@ -95,10 +129,6 @@
   transform: translateY(-2rem);
   transition: all 0.3s ease-in-out;
   box-shadow: 10px 1rem 1rem lightskyblue;
-}
-
-.project:nth-child(even) .project-image {
-  justify-content: flex-end;
 }
 
 .project-description {
