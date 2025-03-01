@@ -4,7 +4,7 @@
 
 <template>
 <div class="about-me-container">
-something about me
+  hello
 </div>
 </template>
 
@@ -12,7 +12,6 @@ something about me
 .about-me-container {
   width: 100vw;
   height: 60vh;
-  background: white;
-  color: black;
+  background: var(--color-background);
 }
 </style>

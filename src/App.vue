@@ -68,14 +68,6 @@ onMounted(() => {
   clip-path: polygon(0 100%, 0 0, 150% 100%);
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  height: 0;
-  transition: top 0.3s;
-}
-
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -86,6 +78,14 @@ onMounted(() => {
   100% {
     background-position: 0 50%;
   }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  height: 0;
+  transition: top 0.3s;
 }
 
 .typing-container {
