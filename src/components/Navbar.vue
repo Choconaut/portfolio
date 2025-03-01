@@ -2,25 +2,22 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  const hamburger = document.querySelector(".hamburger")
-  if (!hamburger) {
-    console.error("Element with class 'hamburger' not found")
+  const menuButtons = document.querySelectorAll(".btn")
+  if (!menuButtons.length) {
+    console.error("No elements with class 'btn' found")
     return;
   }
-  const hamburger_icon = hamburger.querySelector("span")
   const mobile_menu = document.querySelector(".mobile-menu")
 
-  hamburger.addEventListener("click", () => {
-    if (hamburger_icon) {
-      hamburger_icon.innerText = hamburger_icon.innerText === 'menu'
-        ? 'close'
-        : 'menu';
-    }
-    if (mobile_menu) {
-      mobile_menu.classList.toggle('is-open')
-    }
-  })
-})
+  menuButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      if (mobile_menu) {
+        mobile_menu.classList.toggle('is-open')
+      }
+    });
+  });
+});
+
 </script>
 
 <template v-bind="$attrs">
@@ -34,15 +31,16 @@ onMounted(() => {
       <a href="#connect">Let's Connect</a>
     </div>
 
-    <button class="hamburger">
+    <button class="btn">
       <span class="material-symbols-outlined">menu</span>
     </button>
 
     <div class="mobile-menu">
-      <router-link class="link" to="/">Home</router-link>
-      <router-link class="link" to="/projects">Projects</router-link>
-      <router-link class="link" to="/about">About</router-link>
-      <router-link class="link" to="/contact">Contact</router-link>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#connect">Let's Connect</a>
+      <button class="material-symbols-rounded btn">close</button>
     </div>
   </nav>
 </template>
@@ -105,7 +103,7 @@ nav {
   color: #189ab4;
 }
 
-.hamburger {
+.btn {
   appearance: none;
   outline: none;
   border: none;
@@ -117,12 +115,12 @@ nav {
   height: 2rem;
 }
 
-.hamburger span {
+.btn span {
   color: var(--color-text);
   font-size: 2rem;
 }
 
-.hamburger :hover {
+.btn :hover {
   color: #189ab4;
 }
 
@@ -141,6 +139,9 @@ nav {
   box-shadow: var(--color-box-shadow);
   color: var(--color-text);
   transition: 0.3s;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-menu.is-open {
@@ -156,6 +157,13 @@ nav {
   text-decoration: none;
   font-size: 1.25rem;
   transition: 0.3s;
+  width: 100%;
+}
+
+.mobile-menu button {
+  color: var(--color-text);
+  margin-top: auto;
+  margin-bottom: 2rem;
 }
 
 .mobile-menu a:hover {
@@ -164,7 +172,7 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .mobile-menu .hamburger {
+  .mobile-menu .btn {
     display: flex;
   }
 
@@ -178,7 +186,7 @@ nav {
     display: none;
   }
 
-  .hamburger {
+  .btn {
     display: none;
   }
 
