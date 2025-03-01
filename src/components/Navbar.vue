@@ -2,9 +2,9 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  const menuButtons = document.querySelectorAll(".btn")
+  const menuButtons = document.querySelectorAll(".action")
   if (!menuButtons.length) {
-    console.error("No elements with class 'btn' found")
+    console.error("No elements with class 'action' found")
     return;
   }
   const mobile_menu = document.querySelector(".mobile-menu")
@@ -31,16 +31,16 @@ onMounted(() => {
       <a href="#connect">Let's Connect</a>
     </div>
 
-    <button class="btn">
+    <button class="btn action">
       <span class="material-symbols-outlined">menu</span>
     </button>
 
     <div class="mobile-menu">
-      <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#connect">Let's Connect</a>
-      <button class="material-symbols-rounded btn">close</button>
+      <a href="#home" class="action">Home</a>
+      <a href="#projects" class="action">Projects</a>
+      <a href="#about" class="action">About</a>
+      <a href="#connect" class="action">Let's Connect</a>
+      <button class="material-symbols-rounded btn action">close</button>
     </div>
   </nav>
 </template>
