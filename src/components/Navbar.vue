@@ -23,14 +23,14 @@ onMounted(() => {
 })
 </script>
 
-<template>
+<template v-bind="$attrs">
   <nav>
-    <h1>Peter Chen</h1>
+    <a href="#connect" class="name-box">Peter Chen</a>
 
     <div class="menu">
       <a href="#home">Home</a>
       <a href="#projects">Projects</a>
-      <a href="#about">About Me</a>
+      <a href="#about">About</a>
       <a href="#connect">Let's Connect</a>
     </div>
 
@@ -64,20 +64,25 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-text);
+  background-color: var(--color-background);
+  opacity: 50%;
   padding: 1rem 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav h1 {
+.name-box {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  text-decoration: none;
   letter-spacing: 5px;
   padding: 0.5rem calc(1rem - 5px) 0.5rem 1rem;
   border: 3px solid var(--color-text);
   transition: 0.3s;
   font-weight: bold;
+  user-select: none;
 }
 
-nav h1:hover {
+.name-box:hover {
   color: #189ab4;
 }
 

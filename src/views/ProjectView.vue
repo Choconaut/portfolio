@@ -36,9 +36,9 @@
 <style scoped>
 .project-container {
   width: 100vw;
-  background: white;
+  background: var(--color-background);
   padding-top: 5rem;
-  color: black;
+  color: var(--color-text);
 
   @media (max-width: 675px) {
     padding-top: 1rem;
@@ -102,7 +102,7 @@
 }
 
 .project-description {
-  z-index: 99;
+  z-index: 97;
   height: 100%;
   width: 30%;
   margin-top: 2.5rem;

@@ -4,11 +4,31 @@ import HomeView from '@/views/HomeView.vue'
 import ProjectView from '@/views/ProjectView.vue'
 import FooterView from '@/views/FooterView.vue'
 import AboutMeView from '@/views/AboutMeView.vue'
+
+import { ref, onMounted } from 'vue'
+
+// This is a simple sticky navbar that hides when scrolling down and shows when scrolling up
+const navbar = ref(null)
+let lastScrollTop = 0;
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      if (navbar.value) navbar.value.style.top = '-6rem';
+    } else {
+      if (navbar.value) navbar.value.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+  });
+});
 </script>
 
 <template>
-  <div  id="home" class="main-container">
-    <Navbar />
+  <div class="navbar" ref="navbar">
+    <Navbar id="navigation"/>
+  </div>
+  <div id="home" class="main-container">
     <div class="typing-container">
       <HomeView/>
     </div>
@@ -27,7 +47,6 @@ import AboutMeView from '@/views/AboutMeView.vue'
 <style scoped>
 .main-container {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -35,6 +54,7 @@ import AboutMeView from '@/views/AboutMeView.vue'
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  padding-top: 5rem;
 }
 
 .main-container::after {
@@ -44,8 +64,16 @@ import AboutMeView from '@/views/AboutMeView.vue'
   left: 0;
   width: 100%;
   height: 40%;
-  background: white;
+  background: var(--color-background);
   clip-path: polygon(0 100%, 0 0, 150% 100%);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  height: 0;
+  transition: top 0.3s;
 }
 
 @keyframes gradient {
