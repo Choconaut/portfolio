@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
 import Navbar from '@/components/Navbar.vue'
 import HomeView from '@/views/HomeView.vue'
 import ProjectView from '@/views/ProjectView.vue'
@@ -8,15 +7,21 @@ import AboutMeView from '@/views/AboutMeView.vue'
 </script>
 
 <template>
-  <div class="main-container">
+  <div  id="home" class="main-container">
     <Navbar />
     <div class="typing-container">
-      <HomeView />
+      <HomeView/>
     </div>
   </div>
-  <ProjectView />
-  <AboutMeView />
-  <FooterView />
+  <div id="projects">
+    <ProjectView/>
+  </div>
+  <div id="about">
+    <AboutMeView />
+  </div>
+  <div id="connect">
+    <FooterView />
+  </div>
 </template>
 
 <style scoped>
@@ -61,5 +66,4 @@ import AboutMeView from '@/views/AboutMeView.vue'
   margin-top: 10rem;
   justify-content: center;
 }
-
 </style>

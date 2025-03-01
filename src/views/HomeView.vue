@@ -3,9 +3,12 @@ import { ref, onMounted } from 'vue'
 import {onUnmounted} from 'vue'
 
 const words = ["Hello World",
-              "I am Peter Chen",
-              "One step back, Two forward...",
-              "Thanks for visiting!"]
+              "I am Peter Chen, a fullstack developer",
+              "I used my thinking muscles for this one",
+              "Thanks for visiting!",
+              "One step back, two forward",
+              "Every journey has its final day, don't rush",
+              ]
 const text = ref("")
 let i = 0
 let timer: ReturnType<typeof setTimeout> | null = null
@@ -67,6 +70,10 @@ p {
   user-select: none;
   animation:
     gradient 8s infinite;
+
+  @media (max-width: 768px) {
+    font-size: 1.3em;
+  }
 }
 p:last-of-type {
   animation:

@@ -1,3 +1,6 @@
 @import './base.css';
 @import 'material-symbols';
 
+html, body {
+    scroll-behavior: smooth;
+}

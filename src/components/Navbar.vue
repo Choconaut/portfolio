@@ -28,10 +28,10 @@ onMounted(() => {
     <h1>Peter Chen</h1>
 
     <div class="menu">
-      <router-link to="/">Home</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/about">About Me</router-link>
-      <router-link to="/connect">Let's Connect</router-link>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About Me</a>
+      <a href="#connect">Let's Connect</a>
     </div>
 
     <button class="hamburger">
@@ -41,7 +41,7 @@ onMounted(() => {
     <div class="mobile-menu">
       <router-link class="link" to="/">Home</router-link>
       <router-link class="link" to="/projects">Projects</router-link>
-      <router-link class="link" to="/about">About Me</router-link>
+      <router-link class="link" to="/about">About</router-link>
       <router-link class="link" to="/contact">Contact</router-link>
     </div>
   </nav>
@@ -117,6 +117,10 @@ nav h1:hover {
   font-size: 2rem;
 }
 
+.hamburger :hover {
+  color: #189ab4;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -153,8 +157,22 @@ nav h1:hover {
   background-color: var(--color-text);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .mobile-menu .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .hamburger {
     display: none;
   }
 
