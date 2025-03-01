@@ -1,12 +1,13 @@
 :root {
   --light-background: #FAF3E0;
-  --dark-background: #1a1a2e;
+  --dark-background: #1a1a3e;
 
   --light-text: #333333;
-  --dark-text: #faf3e0;
+  --dark-text: #f9e8d0;
 
   --light-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   --dark-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 }
 
 /* semantic color variables for this project */
@@ -14,6 +15,8 @@
   --color-background: var(--light-background);
 
   --color-text: var(--light-text);
+
+  --color-box-shadow: var(--light-box-shadow);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +24,8 @@
     --color-background: var(--dark-background);
 
     --color-text: var(--dark-text);
+
+    --color-box-shadow: var(--dark-box-shadow);
   }
 }
 

@@ -67,7 +67,7 @@ nav {
   background-color: var(--color-background);
   opacity: 50%;
   padding: 1rem 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--color-box-shadow);
 }
 
 .name-box {
@@ -138,6 +138,7 @@ nav {
   opacity: 0;
   transform: translateY(-100%);
   background-color: var(--color-background);
+  box-shadow: var(--color-box-shadow);
   color: var(--color-text);
   transition: 0.3s;
 }

@@ -37,7 +37,7 @@ function deleteNow() {
     } else {
       // Move to the next word (or loop back to the first)
       i = (i + 1) % words.length
-      typeNow()
+      timer = setTimeout(typeNow, 1000)
     }
   }
   loopDeleting()
