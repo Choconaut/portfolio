@@ -8,12 +8,12 @@ import AboutMeView from '@/views/AboutMeView.vue'
 import { ref, onMounted } from 'vue'
 
 // This is a simple sticky navbar that hides when scrolling down and shows when scrolling up
-const navbar = ref(null)
+const navbar = ref<HTMLElement | null>(null)
 let lastScrollTop = 0;
 
 onMounted(() => {
   window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
       if (navbar.value) navbar.value.style.top = '-6rem';
     } else {
