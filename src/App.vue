@@ -36,7 +36,7 @@ onMounted(() => {
   <div id="about" class="about-me-container">
     <AboutMeView />
   </div>
-  <div id="projects">
+  <div id="projects" class="project-container">
     <ProjectView/>
   </div>
   <div id="connect">
@@ -65,10 +65,10 @@ onMounted(() => {
 .main-container::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1%;
   left: 0;
   width: 100%;
-  height: 40%;
+  height: 41%;
   background: var(--color-background);
   clip-path: polygon(0 100%, 0 0, 150% 100%);
 }
@@ -107,5 +107,9 @@ onMounted(() => {
   width: 100vw;
   display: flex;
   align-items: center;
+}
+
+.project-container {
+  padding-bottom: 2rem;
 }
 </style>

@@ -33,11 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <style scoped>
 .about-me-container {
-  height: 100vh;
+  height: 120vh;
   display: flex;
   background: var(--color-background);
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 560px) {
+    height: 80vh;
+  }
 }
 
 /* outer darker card */
@@ -73,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   padding: 2rem 3rem;
   opacity: 0;
   color: #FFFFFF;
-  font-size: clamp(0.6rem, 2vw, 1.5rem);
+  font-size: clamp(0.6rem, 1.5vw, 1.5rem);
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #0077DD 40%, #005BB5 100%);
