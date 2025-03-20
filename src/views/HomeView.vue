@@ -14,7 +14,7 @@ let i = 0
 let timer: ReturnType<typeof setTimeout> | null = null
 
 function typeNow() {
-  let letters = words[i].split("")
+  const letters = words[i].split("")
   const loopTyping = () => {
     if (letters.length > 0) {
       text.value += letters.shift()
@@ -28,7 +28,7 @@ function typeNow() {
 }
 
 function deleteNow() {
-  let letters = words[i].split("")
+  const letters = words[i].split("")
   const loopDeleting = () => {
     if (letters.length > 0) {
       letters.pop()

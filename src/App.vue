@@ -33,11 +33,11 @@ onMounted(() => {
       <HomeView/>
     </div>
   </div>
+  <div id="about" class="about-me-container">
+    <AboutMeView />
+  </div>
   <div id="projects">
     <ProjectView/>
-  </div>
-  <div id="about">
-    <AboutMeView />
   </div>
   <div id="connect">
     <FooterView />
@@ -50,11 +50,16 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 115vh;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   padding-top: 5rem;
+
+  @media(max-width: 768px) {
+    padding-top: 2rem;
+    height: 90vh;
+  }
 }
 
 .main-container::after {
@@ -89,9 +94,18 @@ onMounted(() => {
 }
 
 .typing-container {
+  position: absolute;
   width: 100%;
   display: flex;
   margin-top: 10rem;
   justify-content: center;
+  top: 20%;
+  transform: translateY(-50%);
+}
+
+.about-me-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 </style>
