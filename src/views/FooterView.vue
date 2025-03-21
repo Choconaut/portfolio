@@ -5,11 +5,17 @@
 <template>
   <div class="footer-container">
     <div class="connect-container">
-      <a href="https://github.com/Choconaut">
-        <img src="/github-mark-white.png" alt="GitHub Follow" />
-      </a>
-      <a href="https://www.linkedin.com/in/peter-n-chen/">
-        <img src="/InBug-White.png" alt="LinkedIn Connect" />
+      <div class="links">
+        <a href="https://github.com/Choconaut">
+          <img src="/github-mark-white.png" alt="GitHub Follow" />
+        </a>
+        <a href="https://www.linkedin.com/in/peter-n-chen/">
+          <img src="/InBug-White.png" alt="LinkedIn Connect" />
+        </a>
+      </div>
+      <a href="public/Peter_Chen_Resume.pdf" download="Peter_Chen_Resume.pdf" class="resume">
+        <span class="material-symbols-outlined">file_download</span>
+        Download Resume
       </a>
     </div>
   </div>
@@ -64,12 +70,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100%;
+  gap: 1rem;
 }
 
 .connect-container a img {
   width: 2rem;
   height: 2rem;
   margin: 0 1rem;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0.5rem 1rem;
+  border: 2px solid #f9e8d0;
+  border-radius: 5px;
+  color: #f9e8d0;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.resume:hover {
+  background-color: rgba(249, 232, 208, 0.2);
+  color: #fffaf6;
 }
 </style>
