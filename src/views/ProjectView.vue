@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3>Tank Game</h3>
         <p>Game  developed in JavaFX to demonstrate OOP design principles </p>
       </div>
-      <a href="https://github/choconaut/tankgame.com" class="project-image">
+      <a href="https://github.com/choconaut/tankgame" class="project-image">
         <div class="image-container">
           <img src="/tankgame.png" alt="tank-game image">
         </div>
