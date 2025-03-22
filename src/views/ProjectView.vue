@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="project-description">
         <h3>Parcel Search</h3>
         <p>Full Stack Data Viewer Webapp built with Vue.js,
-        PostgreSQL, Springboot, and AWS Lightsail</p>
+        PostgreSQL, Springboot hosted on AWS Lightsail</p>
       </div>
     </div>
 

@@ -34,9 +34,17 @@ onMounted(() => {
     </div>
   </div>
   <div id="about" class="about-me-container">
+    <div class="header">
+      <h2>About Me</h2>
+      <hr/>
+    </div>
     <AboutMeView />
   </div>
   <div id="projects" class="project-container">
+    <div class="header">
+      <h2>Projects</h2>
+      <hr/>
+    </div>
     <ProjectView/>
   </div>
   <div id="connect">
@@ -93,6 +101,35 @@ onMounted(() => {
   transition: top 0.3s;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+
+  @media(max-width: 768px) {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    background: linear-gradient(45deg, #23a6d5, #e73c7e);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+  }
+
+  hr {
+    border: none;
+    height: 4px;
+    width: 80%;
+    background: linear-gradient(90deg, #23a6d5, #e73c7e);
+  }
+}
+
 .typing-container {
   position: absolute;
   width: 100%;
@@ -107,6 +144,7 @@ onMounted(() => {
   width: 100vw;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .project-container {

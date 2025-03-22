@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, index * 200); // 300ms between each card
       }
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.2 });
 
   cards.forEach(card => observer.observe(card));
 });
@@ -35,12 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
 .about-me-container {
   height: 120vh;
   display: flex;
+  flex-direction: column;
   background: var(--color-background);
   justify-content: center;
   align-items: center;
+  @media(min-width: 560px) and (max-width: 1200px) {
+    height: 90vh;
+  }
 
   @media(max-width: 560px) {
-    height: 80vh;
+    height: 60vh;
   }
 }
 

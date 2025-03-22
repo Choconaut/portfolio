@@ -26,8 +26,8 @@ onMounted(() => {
 
     <div class="menu">
       <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
       <a href="#about">About</a>
+      <a href="#projects">Projects</a>
       <a href="#connect">Let's Connect</a>
     </div>
 
@@ -37,8 +37,8 @@ onMounted(() => {
 
     <div class="mobile-menu">
       <a href="#home" class="action">Home</a>
-      <a href="#projects" class="action">Projects</a>
       <a href="#about" class="action">About</a>
+      <a href="#projects" class="action">Projects</a>
       <a href="#connect" class="action">Let's Connect</a>
       <button class="material-symbols-rounded btn action">close</button>
     </div>

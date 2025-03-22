@@ -8,6 +8,9 @@
   --light-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   --dark-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
+  --color-header: #2A6F4A;
+  --color-hr: #D67FA3;
+
 }
 
 /* semantic color variables for this project */

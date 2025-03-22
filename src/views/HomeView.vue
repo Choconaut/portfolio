@@ -18,7 +18,7 @@ function typeNow() {
   const loopTyping = () => {
     if (letters.length > 0) {
       text.value += letters.shift()
-      timer = setTimeout(loopTyping, 200)
+      timer = setTimeout(loopTyping, 175)
     } else {
       // Wait for 2 seconds for readability
       timer = setTimeout(deleteNow, 2000)
