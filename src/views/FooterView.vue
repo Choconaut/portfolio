@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+  const resumeLink = `${import.meta.env.BASE_URL}Peter_Chen_Resume.pdf`;
 </script>
 
 <template>
@@ -13,10 +13,14 @@
           <img src="/InBug-White.png" alt="LinkedIn Connect" />
         </a>
       </div>
-      <a href="${import.meta.env.BASE_URL}/Peter_Chen_Resume.pdf" download="Peter_Chen_Resume.pdf" class="resume">
-        <span class="material-symbols-outlined">file_download</span>
-        Download Resume
+      <a
+        :href="resumeLink"
+        download="Peter_Chen_Resume.pdf"
+        class="resume"
+      >
+        Download My Resume
       </a>
+
     </div>
   </div>
 </template>
