@@ -141,7 +141,6 @@ onMounted(() => {
 }
 
 .about-me-container {
-  width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
