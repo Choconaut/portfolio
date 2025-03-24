@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   background: var(--color-background);
   padding-top: 5rem;
   color: var(--color-text);
+  overflow-x: hidden;
 
   @media (max-width: 675px) {
     padding-top: 1rem;
