@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
   flex-direction: row;
   opacity: 0;
   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  padding-top: 2rem;
+  overflow: hidden;
 }
 
 .project:nth-child(odd) {
