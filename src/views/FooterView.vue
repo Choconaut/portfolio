@@ -44,7 +44,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 51%;
+  bottom: -1%;
   background: var(--color-background);
   clip-path: polygon(0 50%, 100% 0, 0 0);
 }
