@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     I’m a software engineer who loves tackling challenging problems and exploring
     new technologies. Whether it’s designing clean, maintainable backends or
     experimenting with dynamic frontends, I enjoy turning ideas into reality.
-    When I’m not coding, I’m likely playing strategy or RPGs that inspire logical
+    When I’m not coding, I’m likely playing strategy games or RPGs that inspire logical
     thinking and creativity.
     </div>
   </div>
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   position: relative;
   height: 40rem;
   width: 60rem;
-  transform: rotate(7deg);
+  transform: rotate(5deg);
   background-color: #0D1B2A;
   overflow: visible;
   opacity: 0;
@@ -81,13 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
   padding: 2rem 3rem;
   opacity: 0;
   color: #FFFFFF;
-  font-size: clamp(0.6rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.6rem, 2vw, 1.5rem);
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #0077DD 40%, #005BB5 100%);
   border: 5px solid #0D1B2A;
   font-family: 'Roboto Condensed', sans-serif;
-  text-transform: uppercase;
   transition: transform .2s ease, box-shadow .2s ease;
   letter-spacing: 0.05em;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -137,7 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
   z-index: -1;
 }
 
-
 .description:hover {
   transform: rotate(20deg) scale(1.05);
   box-shadow: 0 15px 40px rgba(0,0,0,0.5);
@@ -151,10 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 @keyframes slide-in {
   0% {
-    transform: rotate(10deg) translateX(-100%);
+    transform: rotate(5deg) translateX(-100%);
   }
   100% {
-    transform: rotate(10deg) translateX(0);
+    transform: rotate(5deg) translateX(0);
   }
 }
 </style>
