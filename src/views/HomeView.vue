@@ -18,10 +18,10 @@ function typeNow() {
   const loopTyping = () => {
     if (letters.length > 0) {
       text.value += letters.shift()
-      timer = setTimeout(loopTyping, 150)
+      timer = setTimeout(loopTyping, 75)
     } else {
-      // Wait for 2 seconds for readability
-      timer = setTimeout(deleteNow, 1500)
+      // Wait for 1 second(s) for readability
+      timer = setTimeout(deleteNow, 1000)
     }
   }
   loopTyping()
@@ -33,7 +33,7 @@ function deleteNow() {
     if (letters.length > 0) {
       letters.pop()
       text.value = letters.join("")
-      timer = setTimeout(loopDeleting, 25)
+      timer = setTimeout(loopDeleting, 10)
     } else {
       // Move to the next word (or loop back to the first)
       i = (i + 1) % words.length
