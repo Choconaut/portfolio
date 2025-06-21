@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="project-container">
   <div class="divider">
     <div class="project">
-      <a href="https://dev.parcelsearch.com" class="project-image">
+      <a href="" class="project-image">
         <div class="image-container">
           <img src="/parcel-search.png" alt="parcel-search image">
         </div>
