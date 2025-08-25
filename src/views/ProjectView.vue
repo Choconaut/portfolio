@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="project">
       <a href="https://ps.peternchen.com/" class="project-image">
         <div class="image-container">
-          <img src="/parcel-search.png" alt="parcel-search image">
+          <img src="/parcelsearch.png" alt="parcel-search image">
         </div>
       </a>
       <div class="project-description">
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   @media (min-width: 1000px) {
-    transform: translateX(3rem);
+    transform: translateX(5rem);
   }
 }
 
