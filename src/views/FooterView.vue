@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const resumeLink = `${import.meta.env.BASE_URL}Peter_Chen_Resume.pdf`;
+  const resumeLink = `${import.meta.env.BASE_URL}peter_chen_resume.pdf`;
 </script>
 
 <template>
