@@ -15,7 +15,7 @@
       </div>
       <a
         :href="resumeLink"
-        download="Peter_Chen_Resume.pdf"
+        download="peter_chen_resume.pdf"
         class="resume"
       >
         Download My Resume
