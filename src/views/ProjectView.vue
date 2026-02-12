@@ -40,14 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <div class="project">
       <div class="project-description">
-        <h3>Tank Game</h3>
-        <p>Game  developed in JavaFX to demonstrate OOP design principles </p>
+        <h3>WJLC Learning</h3>
+        <p>Homepage redesign for a nonprofit organization focused on accessibility,
+          responsive UI, and clear calls-to-action built with Next.js</p>
       </div>
+      <a href="https://www.wlclearning.org/" class="project-image">
+        <div class="image-container">
+          <img src="/wjlclearning.png" alt="wjlc image">
+        </div>
+      </a>
+    </div>
+
+    <div class="project">
       <a href="https://github.com/choconaut/tankgame" class="project-image">
         <div class="image-container">
           <img src="/tankgame.png" alt="tank-game image">
         </div>
       </a>
+      <div class="project-description">
+        <h3>Tank Game</h3>
+        <p>Game developed in JavaFX to demonstrate OOP design principles </p>
+      </div>
     </div>
   </div>
 </div>
@@ -79,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   opacity: 0;
   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
   padding-top: 2rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .project:nth-child(odd) {
@@ -159,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 .project-description:nth-child(even) {
-  transform: translateX(-0.5rem);
+  transform: translateX(-2rem);
 
   @media (max-width: 675px) {
     transform: translateX(-1.5rem);
